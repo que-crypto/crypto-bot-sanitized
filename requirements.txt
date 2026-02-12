@@ -1,0 +1,110 @@
+# ==============================================================================
+# CRYPTO SENTIMENT TRADING BOT - PYTHON DEPENDENCIES
+# ==============================================================================
+# Install all dependencies with: pip install -r requirements.txt
+#
+# For Ubuntu/Linux, you may need to use:
+# pip install --break-system-packages -r requirements.txt
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Core ML/NLP Libraries
+# ------------------------------------------------------------------------------
+
+# Hugging Face Transformers - For BERT sentiment analysis
+transformers>=4.30.0
+
+# PyTorch - Deep learning framework (BERT backend)
+torch>=2.0.0
+
+# Scikit-learn - For backtesting, metrics, and optimization
+scikit-learn>=1.3.0
+
+# ------------------------------------------------------------------------------
+# API & Web
+# ------------------------------------------------------------------------------
+
+# Requests - HTTP library for API calls
+requests>=2.31.0
+
+# Python-dotenv - Environment variable management
+python-dotenv>=1.0.0
+
+# ------------------------------------------------------------------------------
+# Social Media APIs
+# ------------------------------------------------------------------------------
+
+# Tweepy - Twitter/X API client
+tweepy>=4.14.0
+
+# PRAW - Reddit API client
+praw>=7.7.0
+
+# ------------------------------------------------------------------------------
+# Exchange & Trading
+# ------------------------------------------------------------------------------
+
+# CCXT - Unified cryptocurrency exchange API
+ccxt>=4.0.0
+
+# ------------------------------------------------------------------------------
+# Optional: PDF Generation (if using guides)
+# ------------------------------------------------------------------------------
+
+# ReportLab - PDF generation (optional, for generating documentation)
+# reportlab>=4.0.0
+
+# ------------------------------------------------------------------------------
+# Optional: Advanced Features
+# ------------------------------------------------------------------------------
+
+# Feedparser - For Reddit RSS fallback (no API key needed)
+# feedparser>=6.0.0
+
+# NumPy - Numerical computing (already included via scikit-learn)
+# numpy>=1.24.0
+
+# Pandas - Data manipulation (for backtesting analysis)
+# pandas>=2.0.0
+
+# ==============================================================================
+# INSTALLATION NOTES
+# ==============================================================================
+#
+# Standard installation:
+#   pip install -r requirements.txt
+#
+# With virtual environment (recommended):
+#   python3 -m venv venv
+#   source venv/bin/activate  # On Windows: venv\Scripts\activate
+#   pip install -r requirements.txt
+#
+# On Ubuntu 24.04 with externally-managed-environment error:
+#   pip install --break-system-packages -r requirements.txt
+#
+# For GPU support (optional, faster BERT inference):
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#
+# Estimated download size: ~2-3 GB (mostly PyTorch and Transformers models)
+# Estimated disk space: ~5-6 GB after installation
+#
+# ==============================================================================
+
+# ==============================================================================
+# TROUBLESHOOTING
+# ==============================================================================
+#
+# If torch installation fails:
+#   - Try CPU-only version: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+#   - Or visit: https://pytorch.org/get-started/locally/
+#
+# If transformers is slow to download:
+#   - Model downloads happen on first use, not during pip install
+#   - Be patient during first run (downloads ~500MB BERT model)
+#
+# If you get "No module named X" errors:
+#   - Verify virtual environment is activated
+#   - Re-run: pip install -r requirements.txt
+#   - Check: pip list | grep <package-name>
+#
+# ==============================================================================
